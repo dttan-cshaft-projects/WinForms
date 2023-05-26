@@ -1,0 +1,6 @@
+C:\Users\0138429\source\repos\StudentManagement\DAO\bin\Debug\DAO.dll
+C:\Users\0138429\source\repos\StudentManagement\DAO\bin\Debug\DAO.pdb
+C:\Users\0138429\source\repos\StudentManagement\DAO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\0138429\source\repos\StudentManagement\DAO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\0138429\source\repos\StudentManagement\DAO\obj\Debug\DAO.dll
+C:\Users\0138429\source\repos\StudentManagement\DAO\obj\Debug\DAO.pdb
