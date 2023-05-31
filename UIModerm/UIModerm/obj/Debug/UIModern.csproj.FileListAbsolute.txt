@@ -1,0 +1,12 @@
+C:\Users\0138429\source\repos\UIModerm\UIModerm\bin\Debug\UIModerm.exe.config
+C:\Users\0138429\source\repos\UIModerm\UIModerm\bin\Debug\UIModerm.exe
+C:\Users\0138429\source\repos\UIModerm\UIModerm\bin\Debug\UIModerm.pdb
+C:\Users\0138429\source\repos\UIModerm\UIModerm\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModern.csproj.AssemblyReference.cache
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModerm.Properties.Resources.resources
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModern.csproj.GenerateResource.cache
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModern.csproj.CoreCompileInputs.cache
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModern.csproj.CopyComplete
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModerm.exe
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModerm.pdb
+C:\Users\0138429\source\repos\UIModerm\UIModerm\obj\Debug\UIModerm.UIModernForm.resources

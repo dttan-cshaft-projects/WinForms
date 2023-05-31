@@ -1,0 +1,10 @@
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\bin\Debug\UIModernLogin.exe.config
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\bin\Debug\UIModernLogin.exe
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\bin\Debug\UIModernLogin.pdb
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.csproj.AssemblyReference.cache
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.Login.resources
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.Properties.Resources.resources
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.csproj.GenerateResource.cache
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.csproj.CoreCompileInputs.cache
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.exe
+C:\Users\0138429\source\repos\UIModernLogin\UIModernLogin\obj\Debug\UIModernLogin.pdb

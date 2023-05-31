@@ -29,10 +29,19 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // StudentsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "StudentsForm";
+            this.Name = "StudentsForm";
+            this.Text = "Students Management";
+            this.Load += new System.EventHandler(this.StudentsForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

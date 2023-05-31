@@ -33,9 +33,9 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pctTitle = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLogin = new FontAwesome.Sharp.IconButton();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.BtnLogin = new FontAwesome.Sharp.IconButton();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -56,9 +56,9 @@ namespace GUI
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Controls.Add(this.txtUsername);
+            this.groupBox1.Controls.Add(this.BtnLogin);
+            this.groupBox1.Controls.Add(this.TxtPassword);
+            this.groupBox1.Controls.Add(this.TxtUsername);
             this.groupBox1.Controls.Add(this.lblPassword);
             this.groupBox1.Controls.Add(this.lblUsername);
             this.groupBox1.Font = new System.Drawing.Font("Monospac821 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,39 +70,41 @@ namespace GUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
-            // btnLogin
+            // BtnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Monospac821 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.Unlock;
-            this.btnLogin.IconColor = System.Drawing.Color.Black;
-            this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLogin.IconSize = 20;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(305, 121);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(80, 37);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            this.BtnLogin.Font = new System.Drawing.Font("Monospac821 BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.IconChar = FontAwesome.Sharp.IconChar.Unlock;
+            this.BtnLogin.IconColor = System.Drawing.Color.Black;
+            this.BtnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnLogin.IconSize = 20;
+            this.BtnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLogin.Location = new System.Drawing.Point(305, 121);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(80, 37);
+            this.BtnLogin.TabIndex = 2;
+            this.BtnLogin.Text = "Login";
+            this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLogin.UseVisualStyleBackColor = true;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // txtPassword
+            // TxtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(97, 73);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(288, 25);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword_Validating);
+            this.TxtPassword.Location = new System.Drawing.Point(97, 73);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(288, 25);
+            this.TxtPassword.TabIndex = 2;
+            this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            this.TxtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword_Validating);
             // 
-            // txtUsername
+            // TxtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(97, 42);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(288, 25);
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsername_Validating);
+            this.TxtUsername.Location = new System.Drawing.Point(97, 42);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.Size = new System.Drawing.Size(288, 25);
+            this.TxtUsername.TabIndex = 1;
+            this.TxtUsername.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            this.TxtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsername_Validating);
             // 
             // lblPassword
             // 
@@ -135,7 +137,6 @@ namespace GUI
             this.Controls.Add(this.pctTitle);
             this.Name = "LoginForm";
             this.Text = "Login";
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.FrmLogin_Validated);
             ((System.ComponentModel.ISupportInitialize)(this.pctTitle)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -148,11 +149,11 @@ namespace GUI
 
         private System.Windows.Forms.PictureBox pctTitle;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
-        private FontAwesome.Sharp.IconButton btnLogin;
+        private FontAwesome.Sharp.IconButton BtnLogin;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

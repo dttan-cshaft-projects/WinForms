@@ -24,14 +24,28 @@ namespace GUI
             InitializeComponent();
 
             //disable button login default
-            btnLogin.Enabled = false;
+            BtnLogin.Enabled = false;
+
+            if (string.IsNullOrWhiteSpace(TxtUsername.Text))
+            {
+                BtnLogin.Enabled = false;
+            }
+            else if (string.IsNullOrWhiteSpace(TxtPassword.Text))
+            {
+                BtnLogin.Enabled = false;
+            }
+            else
+            {
+                BtnLogin.Enabled = true;
+            }
+
 
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = TxtUsername.Text;
+            string password = TxtPassword.Text;
             
 
             if (ValidateChildren(ValidationConstraints.Enabled) )
@@ -43,6 +57,11 @@ namespace GUI
                 if (check)
                 {
                     MessageBox.Show("Login Successfully");
+                    this.Hide();
+
+                    StudentsForm frm = new StudentsForm();
+                    frm.ShowDialog(); // Show StudentsForm and
+                    this.Close(); // closes the Login form instance.
                 }
                 else
                 {
@@ -54,52 +73,66 @@ namespace GUI
         }
 
 
+        //validate text username
         private void TxtUsername_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            if (string.IsNullOrWhiteSpace(TxtUsername.Text))
             {
                 e.Cancel = true;
-                txtUsername.Focus();
-                errorProvider1.SetError(txtUsername, "Username should not be left blank!");
+                TxtUsername.Focus();
+                errorProvider1.SetError(TxtUsername, "Username should not be left blank!");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(txtUsername, "");
+                errorProvider1.SetError(TxtUsername, "");
 
 
             }
         }
 
+        //validate text password
         private void TxtPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            if (string.IsNullOrWhiteSpace(TxtPassword.Text))
             {
                 e.Cancel = true;
-                txtPassword.Focus();
-                errorProvider1.SetError(txtPassword, "Password should not be left blank!");
+                TxtPassword.Focus();
+                errorProvider1.SetError(TxtPassword, "Password should not be left blank!");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(txtPassword, "");
+                errorProvider1.SetError(TxtPassword, "");
 
 
             }
         }
 
-       
-
-        private void FrmLogin_Validated(object sender, EventArgs e)
+        //check Enable Login button
+        private bool BtnLoginEnable()
         {
-            if (string.IsNullOrEmpty(txtUsername.Text) && (string.IsNullOrEmpty(txtPassword.Text)) {
-                btnLogin.Enabled = true;
+            if (!string.IsNullOrWhiteSpace(TxtUsername.Text) && !string.IsNullOrWhiteSpace(TxtPassword.Text))
+            {
+                return true;
+            } else
+            {
+                return false;
             }
+            
         }
 
-        private void FrmLogin_Validated(object sender, CancelEventArgs e)
-        {
 
+        // check textBox username to enable login button
+        private void TxtUsername_TextChanged(object sender, EventArgs e)
+        {
+            BtnLogin.Enabled = this.BtnLoginEnable();
+        }
+
+        // check textBox password to enable login button
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
+        {
+            BtnLogin.Enabled = this.BtnLoginEnable();
         }
     }
 }

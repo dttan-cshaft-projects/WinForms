@@ -40,7 +40,7 @@ namespace DAL
             }
             else if (action == "D")
             {
-                sql = string.Format("DELETE FROM " + _Table + "WHERE username={0}", acc.Username);
+                sql = string.Format("DELETE FROM " + _Table + " WHERE username={0}", acc.Username);
             }
 
             if (String.IsNullOrEmpty(sql))
@@ -56,7 +56,7 @@ namespace DAL
 
         public bool Login(DTOAccounts acc )
         {
-            string sql = string.Format("SELECT count(*) FROM " + _Table + "WHERE username='{0}' AND password='{1}'", acc.Username, acc.Password);
+            string sql = string.Format("SELECT count(*) FROM " + _Table + " WHERE username='{0}' AND password='{1}'", acc.Username, acc.Password);
             int check = ExecuteScalar(sql);
             if (check > 0)
                 return true;
